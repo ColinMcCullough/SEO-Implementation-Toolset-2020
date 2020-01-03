@@ -2,7 +2,21 @@
   background: #7c98ab;
   color: white;
   padding-bottom: 50px;
-  
+}
+.table td, .table th {
+  padding: .7rem;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 2000px;
+}
+
+#vertical,#domain-strat,#chain-brand.form-control  {
+  background: #7c98ab;
+  border-color: #7c98ab; 
+  color: white;
 }
 
 .header {
@@ -22,6 +36,11 @@ h1 {
   background: #7c98ab;
   border-color: #7c98ab; 
   color: white;
+}
+
+.btn-outline-secondary:hover {
+  background: #7c98ab;
+  border-color: #7c98ab; 
 }
 .btn-primary:hover {
   background: #9ea7b3;
@@ -51,4 +70,12 @@ h1 {
 
 html {
   scroll-behavior: smooth;
+}
+
+.pt-3-half {
+padding-top: 1.4rem;
+}
+
+.notes {
+  text-align: left;
 }

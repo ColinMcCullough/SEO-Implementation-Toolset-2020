@@ -1,36 +1,27 @@
-<div class="row">
-    <div class="col-sm">
-      <div class="dropdown">
-        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select Vertical
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Multi Family</a>
-          <a class="dropdown-item" href="#">Self Storage</a>
-          <a class="dropdown-item" href="#">Senior Living</a>
-        </div>
-      </div>
+<div class="row initial-selections">
+    <div class="col-sm text-center">
+        <h3>Client Vertical</h3>
+        <select id="vertical" class="form-control form-control-lg" >
+            <option>Select</option>
+            <option value="mf" >Multi-Family</option>
+            <option value="ss">Self Storage</option>
+            <option value="sl">Senior Living</option>
+        </select>
     </div>
     <div class="col-sm text-center">
-      <div class="dropdown">
-        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select Domain Strategy
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Single Domain</a>
-          <a class="dropdown-item" href="#">Multi Domain</a>
-        </div>
-      </div>
+        <h3>Domain Strategy</h3>
+        <select id="domain-strat" class="form-control form-control-lg" >
+            <option>Select</option>
+            <option>Multi Domain</option>
+            <option>Single Domain</option>
+        </select>
     </div>
     <div class="col-sm text-right">
-      <div class="dropdown">
-        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Chain Branding?
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Yes</a>
-          <a class="dropdown-item" href="#">No</a>
-        </div>
-      </div>
+        <h3 class="text-center">Chain Branding</h3>
+        <select id="chain-brand" class="form-control form-control-lg" >
+            <option>Select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
     </div>
   </div>
