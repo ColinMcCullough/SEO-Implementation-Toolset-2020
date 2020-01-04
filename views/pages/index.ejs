@@ -20,17 +20,32 @@
   <% include ../partials/threedropdowns.ejs %>
   <hr>
   <div class="text-center">
-    <a type="button" class="btn btn-lg btn-primary" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-upload"></span> Upload CSV</a>
+    <a type="button" class="btn btn-lg btn-primary" href="#">Upload CSV</a>
   </div>
   <hr>
   <h3 class="text-center" id="lv-header">SEO Liquid Values</h3>
+  <hr>
+  <h3 class="text-center" id="keyword-header">Keyword Research Accelerator</h3>
+  <p class="text-center"><i>Instructions: Please paste all keywords in their appropriate fields in comma seperated format before running Generate Keywords/Phrases</i></p>
+  
+  <% include ../partials/select-location.ejs %>
+  
+  <h4 class="text-center">Neighborhood Keywords</h4>
+  <textarea id="neighborhood-terms" rows="10" placeholder="Paste your comma seperated Neighborhood Keywords here"></textarea>
+  <h4 class="text-center">Landmark Keywords</h4>
+  <textarea id="landmark-terms" rows="10" placeholder="Paste your comma seperated Landmark Keywords here"></textarea>
   
 </div>
+<footer class="py-2 bg-dark text-white-50">
+  <div class="container text-center">
+    <small>G5 SEO Implemention Team</small>
+  </div>
+</footer>
 <!-- scripts -->
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="../../js/front-end.js" type="text/javascript"></script>
-<script src="../../js/tableheaders.js" type="text/javascript"></script>
+<script src="../../js/injecthtml.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 

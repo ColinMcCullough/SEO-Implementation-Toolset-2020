@@ -1,3 +1,8 @@
+const addAmenityField = () => {
+    return `<h4 class="text-center">Amenity Keywords</h4>
+    <textarea id="amenity-terms" rows="10" placeholder="Paste your comma seperated Amenity Keywords here"></textarea>`;
+}
+
 const getHeaders = (vertical) => {
     const mfTableHeaders = `
         <div class="table-responsive lv-table">
