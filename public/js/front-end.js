@@ -8,17 +8,11 @@ $("select[id='vertical']").change( function() {
   //updates table id to match vertical
   if($(".lv-table").attr('id') !== vertical) { 
     $(".lv-table").attr('id', vertical)
-    //removes amenity col and amenity text field if vertical not mf
+    //removes/adds amenity col and amenity text field based on vertial
     if(vertical != 'mf') {
-      $('table th#apt-amen').hide();
-      $('table th#com-amen').hide();
-      $('.amenity-keywords').hide();
-    }
-    //adds amenity col and amenity text field if vertical is mf
-    else {
-      $('table th#apt-amen').toggle();
-      $('table th#com-amen').toggle();
-      $('.amenity-keywords').toggle();
+      $('#apt-amen,#com-amen,.amenity-keywords').hide();
+    } else {
+      $('#apt-amen,#com-amen,.amenity-keywords').toggle();
     }
   }
 
