@@ -2,18 +2,26 @@ let vertical = $("select[id='vertical']")
 let domainStrat = $("select[id='domain-strat']")
 let chainBranding = $("select[id='chain-brand']")
 
-
 //insert table headers based on vertical selection
 $("select[id='vertical']").change( function() {
   const vertical = $(this).val()
-  //remove table if it exists when changing vertical selection
-  if($(".lv-table")) { $(".lv-table").remove()}
-  //Add table headers when selecting vertical 
-  $( "#lv-header" ).after( getHeaders( vertical ));
-  //Add amenity input field when selecting mf
-  if(vertical === 'mf') {
-    $( "#landmark-terms" ).after( addAmenityField() )
-  };
+  //updates table id to match vertical
+  if($(".lv-table").attr('id') !== vertical) { 
+    $(".lv-table").attr('id', vertical)
+    //removes amenity col and amenity text field if vertical not mf
+    if(vertical != 'mf') {
+      $('table th#apt-amen').hide();
+      $('table th#com-amen').hide();
+      $('.amenity-keywords').hide();
+    }
+    //adds amenity col and amenity text field if vertical is mf
+    else {
+      $('table th#apt-amen').toggle();
+      $('table th#com-amen').toggle();
+      $('.amenity-keywords').toggle();
+    }
+  }
+
   /////Table row functions, will need to be moved eventually
   //Event handler to delete table row in seo lv table
   $('#table').on('click', '.table-remove', function () {

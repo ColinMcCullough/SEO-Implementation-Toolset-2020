@@ -24,17 +24,24 @@
   </div>
   <hr>
   <h3 class="text-center" id="lv-header">SEO Liquid Values</h3>
+  <% include ../partials/default-table-headers.ejs %>
   <hr>
   <h3 class="text-center" id="keyword-header">Keyword Research Accelerator</h3>
   <p class="text-center"><i>Instructions: Please paste all keywords in their appropriate fields in comma seperated format before running Generate Keywords/Phrases</i></p>
   
   <% include ../partials/select-location.ejs %>
-  
-  <h4 class="text-center">Neighborhood Keywords</h4>
-  <textarea id="neighborhood-terms" rows="10" placeholder="Paste your comma seperated Neighborhood Keywords here"></textarea>
-  <h4 class="text-center">Landmark Keywords</h4>
-  <textarea id="landmark-terms" rows="10" placeholder="Paste your comma seperated Landmark Keywords here"></textarea>
-  
+  <div class="neightborhood-keywords">
+    <h4 class="text-center">Neighborhood Keywords</h4>
+    <textarea id="neighborhood-terms" rows="10" placeholder="Paste your comma seperated Neighborhood Keywords here"></textarea>
+  </div>
+  <div class="landmark-keywords">
+    <h4 class="text-center">Landmark Keywords</h4>
+    <textarea id="landmark-terms" rows="10" placeholder="Paste your comma seperated Landmark Keywords here"></textarea>
+  </div>
+  <div class="amenity-keywords">
+    <h4 class="text-center">Amenity Keywords</h4>
+    <textarea id="amenity-terms" rows="10" placeholder="Paste your comma seperated Amenity Keywords here"></textarea>
+  </div>
 </div>
 <footer class="py-2 bg-dark text-white-50">
   <div class="container text-center">
