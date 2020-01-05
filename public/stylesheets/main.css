@@ -1,3 +1,6 @@
+hr {
+ margin-top: 3em;
+}
 .jumbotron {
   background: #7c98ab;
   color: white;
@@ -13,7 +16,7 @@
   max-width: 2000px;
 }
 
-#vertical,#domain-strat,#chain-brand,#select-location.form-control  {
+#vertical,#domain-strat,#chain-brand,#select-location,#redirect-menu.form-control  {
   background: #7c98ab;
   border-color: #7c98ab; 
   color: white;
@@ -24,7 +27,7 @@ footer {
 }
 
 
-h3,h4 {
+h2,h3,h4 {
   padding: 1rem 0rem;
 }
 .header {
@@ -88,7 +91,7 @@ padding-top: 1.4rem;
   text-align: left;
 }
 
-textarea#neighborhood-terms,#landmark-terms,#amenity-terms {
+textarea {
   min-height: 5rem;
   font-size: 90%;
   text-indent: 0;

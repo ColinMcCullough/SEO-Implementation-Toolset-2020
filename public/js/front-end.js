@@ -10,21 +10,22 @@ $("select[id='vertical']").change( function() {
     $(".lv-table").attr('id', vertical)
     //removes/adds amenity col and amenity text field based on vertial
     if(vertical != 'mf') {
-      $('#apt-amen,#com-amen,.amenity-keywords').hide();
+      $('#apt-amen,#com-amen,.amenity-keywords-col,.amenity-phrases-col').hide();
     } else {
-      $('#apt-amen,#com-amen,.amenity-keywords').toggle();
+      $('#apt-amen,#com-amen,.amenity-keywords-col,.amenity-phrases-col').toggle();
     }
   }
-
-  /////Table row functions, will need to be moved eventually
-  //Event handler to delete table row in seo lv table
-  $('#table').on('click', '.table-remove', function () {
-    $(this).parents('tr').detach();
-  });
-  //Change Display from table row Drop downs on selection
-  $(".dropdown-menu").on('click', 'a', function(){
-    $(this).parents('.dropdown').find('button').text($(this).text());
-  });
 });
+
+/////Table row functions, will need to be moved eventually
+//Event handler to delete table row in seo lv table
+$('#table').on('click', '.table-remove', function () {
+  $(this).parents('tr').detach();
+});
+//Change Display from table row Drop downs on selection
+$(".dropdown-menu").on('click', 'a', function(){
+  $(this).parents('.dropdown').find('button').text($(this).text());
+});
+
 
 
