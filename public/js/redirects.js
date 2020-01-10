@@ -5,7 +5,8 @@ const buildRedirectTable = () => {
     const strategy = $("select[id='redirect-menu']").val();
     const redirects = $('#redirects-text').val()
     if (!(checkRedirectState(locName,strategy,redirects))) {
-        window.alert('Select a location, strategy and enter redirects before continuing')
+        $('#error-modal').modal('toggle');
+        $('#modal-error-mess').text('Please ensure a location and strategy are selected as well as redirects entered in the text field below.')
     }
     else {
         const existingNumRows = $('.redirects-table-body tr').length;
@@ -37,17 +38,18 @@ const generateRedirectTable = (name, strategy, redirects) => {
     const array = redirects.split(/\n|,/g);
     const redirectsArr = array.filter((item,index) => array.indexOf(item) === index)
                             .filter(item => Boolean(item.trim())); //need to filter out redirects that have image files
-    return buildHtmlTable(redirectsArr,strategy,name)
+    const table = buildHtmlTable(redirectsArr,strategy,name)
+    return table;
 }
 
 //builds string of all rows
 const buildHtmlTable = (arr,strategy,name) => {
-    let table = ``
+    let htmlTable = ``
     arr.forEach((redirect) => {
         const cloudRedirect = formatRedirect(strategy,redirect)
-        table += tblrow(name,redirect,cloudRedirect)
+        htmlTable += tblrow(name,redirect,cloudRedirect)
     })
-    return table;
+    return htmlTable;
 }
 
 //formats redirects
@@ -70,7 +72,7 @@ const formatRedirect = (strategy,redirect) => {
 
 //checks for a valid url
 const validURL = (str) => {
-    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+    const pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
       '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
       '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
       '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path

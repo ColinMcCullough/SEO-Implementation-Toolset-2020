@@ -1,7 +1,9 @@
-<!-- SEO Liquid Values Section -->
+<!-- SEO Liquid Values Section  -->
 <div class="row text-center">
     <div class="col">
-      <a type="button" class="btn btn-lg btn-primary btn-block" href="#">Upload CSV</a>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-lg btn-primary btn-block" id="upload-csv-btn" data-toggle="modal" data-target="#exampleModal">Upload CSV</button>
+      <% include ./uploadcsvmodal.ejs %>
     </div>
     <div class="col">
       <a type="button" class="btn btn-lg btn-secondary btn-block" href="#">Download CSV</a>
@@ -11,7 +13,7 @@
     </div>
 </div>
 <!-- SEO Liquid Values Table Headers Loads with MF Headers -->
-<div class="table-responsive lv-table" id="mf">
+<div class="table-responsive lv-table" id="lv-table">
     <div id="table" class="table-editable">
         <table class="table table-bordered table-responsive-sm table-striped text-center">
             <thead>

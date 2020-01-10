@@ -16,10 +16,20 @@ hr {
   max-width: 2000px;
 }
 
-#vertical,#domain-strat,#chain-brand,#select-location,#redirect-menu.form-control  {
-  background: #7c98ab;
+#redirects-table,#lv-table {  
+  max-height: 40em !important;
+  overflow: scroll;
+}​
+
+#vertical, #domain-strat,#chain-brand,#select-location,#redirect-menu  {
+  background: #7c98ab !important;
   border-color: #7c98ab; 
   color: white;
+}
+
+.form-group {
+  margin-bottom: 0em;
+  text-align: center;
 }
 
 footer {
