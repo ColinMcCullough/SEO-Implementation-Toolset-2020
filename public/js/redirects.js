@@ -1,7 +1,7 @@
 $("#format-redirects").on('click', function() { buildRedirectTable() });
 
 const buildRedirectTable = () => {
-    const locName = $("select[id='select-location']").val();
+    const locName = $("select[id='select-location-redirects']").val();
     const strategy = $("select[id='redirect-menu']").val();
     const redirects = $('#redirects-text').val()
     if (!(checkRedirectState(locName,strategy,redirects))) {
@@ -103,8 +103,6 @@ const tblrow = (name,url,redirect) => {
                     <option >Yes</option>
                 </select>
             </td>
-            <td class="pt-3-half" contenteditable="true" id="status-code"></td>
-            <td class="pt-3-half" contenteditable="true" id="redirects-to"></td>
             <td>
             <span class="table-remove"><button type="button"
                 class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>

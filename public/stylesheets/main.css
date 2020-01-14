@@ -1,11 +1,27 @@
-hr {
- margin-top: 3em;
+
+
+body > .container {
+  padding-top: 5em;
 }
-.jumbotron {
-  background: #7c98ab;
-  color: white;
-  padding-bottom: 50px;
+.row {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
+#logo {
+  width: 3em;
+  height: 3em;
+}
+
+a.nav-link {
+  color: #0d2240;
+  font-weight:bold
+}
+
+a.nav-link:hover {
+  color: #7c98ab;
+  font-weight:bold
+}
+
 .table td, .table th {
   padding: .7rem;
   white-space: nowrap;
@@ -21,8 +37,13 @@ hr {
   overflow: scroll;
 }​
 
-#vertical, #domain-strat,#chain-brand,#select-location,#redirect-menu  {
-  background: #7c98ab !important;
+#vertical, #domain-strat,#chain-brand,#select-location,#redirect-menu,#select-location-redirects  {
+  background: #7c98ab;
+  border-color: #7c98ab; 
+  color: white;
+}
+#vertical {
+  background: #7c98ab;
   border-color: #7c98ab; 
   color: white;
 }
@@ -38,7 +59,8 @@ footer {
 
 
 h2,h3,h4 {
-  padding: 1rem 0rem;
+  padding: .5rem 0rem;
+  margin-bottom: 0rem;
 }
 .header {
   padding-top: 50px; 
@@ -67,27 +89,6 @@ h1 {
   background: #9ea7b3;
   border-color: #9ea7b3;  
 }
-.jumbotron p {
-  color: #d9ccee;
-  max-width: 75%;
-  margin: 1em auto 2em; 
-}
-.navbar + .jumbotron {
-  margin-top: -20px; 
-}
-.jumbotron .g5-logo {
-  display: block;
-  background: #ffffff;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 150px;
-  height: 150px;
-  margin: auto;
-  border: 2px solid white; 
-}
-.jumbotron .g5-logo img {
-  max-width: 100%; 
-}
 
 html {
   scroll-behavior: smooth;
@@ -113,4 +114,8 @@ textarea {
   border-width: 3px;
   font-size: 1rem;
   height: 7.5rem
+}
+
+h4.title {
+  margin-bottom: 0px
 }

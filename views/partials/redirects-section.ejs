@@ -1,5 +1,12 @@
+<h2 class="text-center" id="redirects-header">Redirects</h2>
 <p class="text-center"><i>Instructions: Please select a location, strategy, and paste all redirects below</i></p>
 <div class="row text-center redirects-strategy">
+    <div class="col-sm text-center">
+        <select id="select-location-redirects" class="form-control form-control-lg" >
+            <option value="">Select Location</option>
+            <option value="loc1">Amazing Apartments</option>
+        </select>
+    </div>
     <div class="col-sm text-center">
         <select id="redirect-menu" class="form-control form-control-lg" >
             <option value="">Select Strategy</option>
@@ -12,7 +19,10 @@
     </div>
     <div class="col">
         <button type="button" class="btn btn-primary btn-lg btn-block" id="format-redirects">Format Redirects</button>
-    </div> 
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="send-redirects-wf">Send Redirects to Wireframe</button>
+    </div>  
 </div>
 <div class="row pt-4">
     <div class="col-sm text-center ">
@@ -30,8 +40,6 @@
                     <th scope = "col" id="curr-url">Current URL</th>
                     <th scope = "col" id="cloud-form">Cloud Formatted</th>
                     <th scope = "col" id="wildcard">Wildcard</th>
-                    <th scope = "col" id="status-code">Status Code</th>
-                    <th scope = "col" id="redirects-to">Redirects To</th>
                     <th scope = "col" id="rmve">Remove</th>
                 </tr>
             </thead>

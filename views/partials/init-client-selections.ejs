@@ -1,28 +1,31 @@
 <!-- Initial Client Attributes of Vertical, Domain Strategy, Chain Branding -->
-<div class="row initial-selections">
-    <div class="col-sm text-center">
-        <h3>Client Vertical</h3>
+<h2 class="text-center">Step 1: Complete Options Below</h2>
+<div class="row ">
+    <div class="col text-center">
         <select id="vertical" class="form-control form-control-lg" >
-            <option value="">Select</option>
+            <option value="">Select Vertical</option>
             <option value="mf" >Multi-Family</option>
             <option value="ss">Self Storage</option>
             <option value="sl">Senior Living</option>
         </select>
     </div>
-    <div class="col-sm text-center">
-        <h3>Domain Strategy</h3>
+    <div class="col text-center">
         <select id="domain-strat" class="form-control form-control-lg" >
-            <option value="">Select</option>
+            <option value="">Select Domain Strategy</option>
             <option value="multi">Multi Domain</option>
             <option value="single">Single Domain</option>
         </select>
     </div>
-    <div class="col-sm text-right">
-        <h3 class="text-center">Chain Branding</h3>
+    <div class="col text-right">
         <select id="chain-brand" class="form-control form-control-lg" >
-            <option value="">Select</option>
+            <option value="">Select Chain Branding</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
         </select>
+    </div>  
+    <div class="col">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-lg btn-primary btn-block" id="upload-csv-btn" data-toggle="modal" data-target="#exampleModal">Upload CSV</button>
+        <% include ./uploadcsvmodal.ejs %>
     </div>
 </div>
