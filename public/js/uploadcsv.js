@@ -1,12 +1,12 @@
 $("#upload-csv-btn").on('click', function() { openCSVModal() });
 
-const openCSVModal = () => {
+	const openCSVModal = () => {
 	if (requiredCSVFieldsSelected()) {
 		$('#uploadcsv').modal('toggle');
 	} 
 	else {
 		$('#error-modal').modal('toggle');
-        $('#modal-error-mess').text('Please ensure the vertical, domain strategy, and chain branding drop downs have been selected')
+		$('#modal-error-mess').text('Please ensure the vertical, domain strategy, and chain branding drop downs have been selected')
 	}
 }
 

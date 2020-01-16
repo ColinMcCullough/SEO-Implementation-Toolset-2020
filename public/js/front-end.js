@@ -1,29 +1,60 @@
-//insert table headers based on vertical selection
+//update amenity text fields based on vertical
 $("select[id='vertical']").change( function() {
   const vertical = $(this).val()
-  //updates table id to match vertical
-  if($(".lv-table").attr('id') !== vertical) { 
-    $(".lv-table").attr('id', vertical)
-    //removes/adds amenity col and amenity text field based on vertial
-    if(vertical != 'mf') {
-      $('#apt-amen,#com-amen,.amenity-keywords-col,.amenity-phrases-col').hide();
-    } else {
-      $('#apt-amen,#com-amen,.amenity-keywords-col,.amenity-phrases-col').toggle();
+  const toggleCols = $('.amenity-keywords-col,.amenity-phrases-col');
+  if(vertical) {
+    if(vertical === 'mf' && toggleCols.is(":hidden")) {
+      $('.amenity-keywords-col,.amenity-phrases-col').toggle();
+    } 
+    else if(vertical != 'mf' && toggleCols.is(":visible")){
+      $('.amenity-keywords-col,.amenity-phrases-col').hide();
     }
   }
+  
 });
 
-/////Table row functions, will need to be moved eventually
-//Event handler to delete table row in seo lv table
+//Event handler to delete table row
 const addDeleteEventHndlr = () => {
   $('.table-remove').on('click', function () {
     $(this).parents('tr').detach();
   });
 }
-//Change Display from table row Drop downs on selection
-$(".dropdown-menu").on('click', 'a', function(){
-  $(this).parents('.dropdown').find('button').text($(this).text());
+
+$( "#locations" ).change(function() {
+  //stepper hidden and valid selection
+  if( $(this).children("option:selected").val()) {
+    if($('.stepper-container').is(":hidden"))
+      $('.stepper-container').toggleClass('d-none');
+      showWizard()
+  } 
+  else {
+    //stepper visible and invalid selection
+    if($('.stepper-container').is(":visible"))
+      $('.stepper-container').toggleClass('d-none');
+  }
 });
 
+const showWizard = () => {
+  $('#stepwizard').smartWizard({
+    theme: 'arrows',
+    transition: 'fade',
+    transitionSpeed: '400',
+    toolbarSettings: {
+      toolbarPosition: 'top'
+    }
+  });
+}
 
-
+$("#stepwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
+  let valid = true;
+  const elmForm = $("#form-step-" + stepNumber).find('.col');
+  if (stepDirection === 'forward' && elmForm) {
+    elmForm.validator('validate');
+    const elmErr = elmForm.children('.has-error');
+    if (elmErr && elmErr.length > 0) {
+      // Form validation failed
+      valid = false;
+    }
+  }
+  return valid;
+});
